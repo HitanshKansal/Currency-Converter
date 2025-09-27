@@ -1,0 +1,165 @@
+
+:root {
+  /* Color Palette */
+  --color-primary: #00796b;
+  --color-primary-dark: #004d40;
+  --color-secondary: #e0f7fa;
+  --color-light-bg: #ffffff;
+  --color-light-accent: #e0f2f1;
+  --color-border: #b2dfdb;
+
+  --shadow-main: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-secondary);
+}
+
+.container {
+  background-color: var(--color-light-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-main);
+  width: 420px;
+  max-width: 90%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+form {
+  margin-top: 1rem;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+form input {
+  border: 1px solid var(--color-border);
+  height: 3.2rem; 
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(0, 121, 107, 0.25); 
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 12px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  padding: 0.5rem 0.75rem; 
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background-color: var(--color-light-accent);
+  transition: border 0.3s, background 0.3s;
+  cursor: pointer; 
+}
+
+.select-container:hover,
+.select-container:focus-within { 
+  border-color: var(--color-primary);
+  background-color: var(--color-border);
+}
+
+.select-container img {
+  width: 2rem;
+  height: auto;
+  border-radius: 0.25rem;
+  
+  user-select: none;
+}
+
+.select-container select {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: inherit; 
+  color: var(--color-primary-dark);
+ 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 1rem; 
+}
+
+.dropdown i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 0 0.5rem; 
+}
+
+.msg {
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+}
+
+/* Button Styling */
+form button {
+  height: 3.2rem;
+  background-color: var(--color-primary);
+  color: var(--color-light-bg);
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+form button:focus {
+  background-color: var(--color-primary-dark);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+form button:active {
+  transform: translateY(0);
+  background-color: #004d40;
+}
